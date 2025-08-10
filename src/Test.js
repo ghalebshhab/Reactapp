@@ -38,24 +38,7 @@ export default function Test(){
     const [title,settit]=useState("");
     const [donlist,setdon]=useState([]);
     const [alllist,setall]=useState([
-    { title:"The First Task",
-        id:"1",
-        body:"Before the month",
-        iscomp:false
-
-    },{
-        title:"The second task",
-        id:"2",
-        body:"Before the year",
-        iscomp:false
-
-    },{
-        title:"The third task",
-        id:"3",
-        body:"Before the 2026",
-        iscomp:false
-
-    }
+    
 
 
     ])
@@ -183,7 +166,7 @@ const st=stllist.map((l)=>{
       </Dialog>
         <form onSubmit={(event)=>{event.preventDefault()}} style={{
             flexDirection:"column",backgroundColor:"white",width:"40%",display:"flex",
-            justifyContent:"flex-start",marginLeft:"350px",alignItems:"center"
+            justifyContent:"flex-start",marginLeft:"300px",alignItems:"center"
             ,borderRadius:"10px",maxHeight:"80vh",overflow:"scroll"
             }}>
     <h1 style={{paddingBottom:"5px",marginBottom:"0px"}}>To-Do list</h1><hr/><Divider component="div"/> <Divider variant="fullWidth" style={{width:"100%",marginBottom:"5px"}} />
