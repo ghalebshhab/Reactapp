@@ -165,8 +165,8 @@ const st=stllist.map((l)=>{
         </DialogActions>
       </Dialog>
         <form onSubmit={(event)=>{event.preventDefault()}} style={{
-            flexDirection:"column",backgroundColor:"white",width:"60%",display:"flex",
-            justifyContent:"flex-start",marginLeft:"300px",alignItems:"center"
+            flexDirection:"column",backgroundColor:"white",width:"100vw",maxWidth:"600px",display:"flex",
+            justifyContent:"flex-start",marginLeft:"0px",alignItems:"center"
             ,borderRadius:"10px",maxHeight:"80vh",overflow:"scroll"
             }}>
     <h1 style={{paddingBottom:"5px",marginBottom:"0px"}}>To-Do list</h1><hr/><Divider component="div"/> <Divider variant="fullWidth" style={{width:"100%",marginBottom:"5px"}} />
