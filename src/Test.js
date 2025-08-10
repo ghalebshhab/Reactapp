@@ -95,7 +95,7 @@ const st=stllist.map((l)=>{
     <div style={{display:"flex",flexDirection:"row",width:"96%",marginTop:"20px",height:"20%",marginBottom:"10px",alignSelf:"flex-end"}}>
 
     <input placeholder="Task Title" style={{width:"70%"}} value={title} onChange={(event)=>{settit(event.target.value)}} />
-    <button style={{width:"30%",backgroundColor:"#01579b",color:"white",border:"none",borderRadius:"3px"}}
+    <button variant="contained"  disabled={title.length<=0} style={title.length>0?{width:"30%",backgroundColor:"#01579b",color:"white",border:"none",borderRadius:"3px"}:{width:"30%",border:"none",borderRadius:"3px"}}
     onClick={()=>{handeladd()}}
     >Add</button>
 
