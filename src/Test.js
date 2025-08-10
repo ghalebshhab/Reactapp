@@ -165,7 +165,7 @@ const st=stllist.map((l)=>{
         </DialogActions>
       </Dialog>
         <form onSubmit={(event)=>{event.preventDefault()}} style={{
-            flexDirection:"column",backgroundColor:"white",width:"40%",display:"flex",
+            flexDirection:"column",backgroundColor:"white",width:"60%",display:"flex",
             justifyContent:"flex-start",marginLeft:"300px",alignItems:"center"
             ,borderRadius:"10px",maxHeight:"80vh",overflow:"scroll"
             }}>
