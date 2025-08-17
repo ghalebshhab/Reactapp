@@ -25,7 +25,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import * as React from 'react'
 let i=4;
-export default function Test(){
+export default function Test({Text,Open,set}){
     function handeladd(){
     //   const up=[...alllist,{title:title,id:i}];
       setall([...alllist,{title:title,id:i}])
@@ -38,14 +38,13 @@ export default function Test(){
     const [title,settit]=useState("");
     const [donlist,setdon]=useState([]);
     const [alllist,setall]=useState([
-    
-
-
     ])
+    const [text,settext]=useState("");
     // useEffect(()=>{
     // const all=JSON.parse(localStorage.getItem('todos'))
     // setall(all)
     // },[])
+    
     const [edit,setedit]=useState({title:"",id:"",body:"",iscomp:false})
     const[open,setop]=useState(false);
     const[openedit,setopenedit]=useState(false)
@@ -188,6 +187,9 @@ const st=stllist.map((l)=>{
             if(ll.id===l.id)
                 ll.iscomp=true;
         })
+        Open(true)
+        set("The task added to done list .")
+        setTimeout(()=>{Open(false)},3000)
     }
     function handeledit(id){
     setopenedit(true)
@@ -207,6 +209,9 @@ setdelid(id);
     setall(up)
     setstl(stllist.filter((l)=>{return l.id !== delid}))
     setdon(donlist.filter((l)=>{return l.id !== delid }))
+    Open(true);
+    set("The task deleted successfully .")
+    setTimeout(()=>{Open(false)},3000)
     localStorage.setItem('todos',JSON.stringify(up));
     }
     function handelsubmit(){
@@ -221,5 +226,11 @@ setdelid(id);
   ));
   setopenedit(false)
   setedit({title:"",id:"",body:"",iscomp:false})
-    }
+  Open(true);
+  set("The Task Editied Successfully .")
+  setTimeout(() => {
+    Open(false)
+  }, 3000);
+
+}
 }

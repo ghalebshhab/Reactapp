@@ -1,13 +1,17 @@
-import { ToggleButtonGroup,ToggleButton } from "@mui/material"
+import { ToggleButtonGroup,ToggleButton} from "@mui/material"
 import { Link ,Routes,Route } from "react-router"
+import { useState } from "react"
+import './tes.css'
 export default function Rot(){
+
+
     return(
         <>
         <ToggleButtonGroup
       exclusive
       aria-label="text alignment"
     >
-     <Link to="/All"><ToggleButton value="left" aria-label="left aligned">
+     <Link to="/All"><ToggleButton value="left" aria-label="left aligned" >
     All
       </ToggleButton></Link>
      <Link to="/Done"> <ToggleButton value="center" aria-label="centered">
